@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/49ae0caa8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"
+      integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg=="
+      crossorigin="anonymous"
+    ></script>
+    <title>WCE Hackathon 2023 | WCE ACM</title>
+  </head>
+  <body>
+    <div id="home">
+      <div class="nav-bar">
+        <ul>
+          <a class="cta" href="#">
+            <li class="menu-heading">WCE ACM</li>
+          </a>
+          <li>
+            <a class="cta">
+              <i class="fa fa-home fa-lg"></i>
+              <span class="hover-underline-animation">
+                Home
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="cta">
+              <i class="fa fa-question"></i>
+              <span class="hover-underline-animation">
+                FAQ
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a class="cta">
+              <i class="fa fa-trophy fa-lg"></i>
+              <span class="hover-underline-animation">
+                Prizes
+              </span>
+            </a>
+          </li>
+          <!-- <p>This is nav</p> -->
+        </ul>
+      </div>
+      <div class="home">
+        <div class="front">
+          <div class="data">
+            <h2>
+              WCE <br />
+              HACKATHON'23
+            </h2>
+            <!-- to add js type effect -->
+            <div class="typing-container">
+              <span id="sentence" class="sentence">Here, take this </span>
+              <span id="feature-text"></span>
+              <span class="input-cursor"></span>
+            </div>
+
+            <div class="btn">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Consequuntur, impedit.
+            </div>
+          </div>
+          <div id="svg"></div>
+        </div>
+        <div class="hackathon">
+          <div id="hackathon">
+            <div class="text"></div>
+            <h1>What is Hackathon</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, dolores dolore. Iste, aperiam in excepturi quidem
+              illum voluptatem corporis eligendi!
+            </p>
+            <div class="container">
+              <div class="loader"></div>
+              <div class="loader"></div>
+              <div class="loader"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="temp">
+        <p>This</p>
+      </div>
+      <div class="problem">
+        <p>This is problem</p>
+      </div>
+      <div class="prizes">
+        <p>This is prizes</p>
+      </div>
+      <div class="sponcers">
+        <p>This is Sponcers</p>
+      </div>
+      <div class="faq">
+        <p>This is faq</p>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <p>This is footer</p>
+    </footer>
+  </body>
+
+  <script>
+    var animation = bodymovin.loadAnimation({
+      // animationData: { /* ... */ },
+      container: document.getElementById("svg"), // required
+      path: "lottie1.json", // required
+      renderer: "svg", // required
+      loop: true, // optional
+      autoplay: true, // optional
+      name: "Demo Animation" // optional
+    });
+
+    const carouselText = [
+      { text: "Prople", color: "red" },
+      { text: "Mentor", color: "orange" },
+      { text: "Hacker", color: "yellow" },
+      { text: "Prizes", color: "green" }
+    ];
+
+    $(document).ready(async function () {
+      carousel(carouselText, "#feature-text");
+    });
+
+    async function typeSentence(sentence, eleRef, delay = 100) {
+      const letters = sentence.split("");
+      let i = 0;
+      while (i < letters.length) {
+        await waitForMs(delay);
+        $(eleRef).append(letters[i]);
+        i++;
+      }
+      return;
+    }
+
+    async function deleteSentence(eleRef) {
+      const sentence = $(eleRef).html();
+      const letters = sentence.split("");
+      let i = 0;
+      while (letters.length > 0) {
+        await waitForMs(100);
+        letters.pop();
+        $(eleRef).html(letters.join(""));
+      }
+    }
+
+    async function carousel(carouselList, eleRef) {
+      var i = 0;
+      while (true) {
+        updateFontColor(eleRef, carouselList[i].color);
+        await typeSentence(carouselList[i].text, eleRef);
+        await waitForMs(1500);
+        await deleteSentence(eleRef);
+        await waitForMs(500);
+        i++;
+        if (i >= carouselList.length) {
+          i = 0;
+        }
+      }
+    }
+
+    function updateFontColor(eleRef, color) {
+      $(eleRef).css("color", color);
+    }
+
+    function waitForMs(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+  </script>
+</html>

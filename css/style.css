@@ -1,0 +1,382 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(68, 67, 67);
+}
+.nav-bar {
+  grid-area: header;
+  height: 50px;
+}
+.home {
+  grid-area: home;
+  /* height: 100vh; */
+}
+.faq {
+  grid-area: faq;
+  height: 30vh;
+}
+.hackathon {
+  grid-area: hackathon;
+  height: 20vh;
+}
+.problem {
+  grid-area: problem;
+  height: 50vh;
+}
+.prizes {
+  grid-area: prizes;
+  height: 30vh;
+}
+.sponcers {
+  grid-area: sponcers;
+  height: 20vh;
+}
+.footer {
+  grid-area: footer;
+  height: 30vh;
+}
+.temp {
+  grid-area: temp;
+  width: 5%;
+  display: none;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+#home {
+  display: grid;
+  grid-template-areas:
+    "temp header header header "
+    "temp home home home"
+    "temp hackathon hackathon hackathon"
+    "temp problem problem problem"
+    "temp prize prize prize"
+    "temp sponcers sponcers sponcers"
+    "temp faq faq faq "
+    "temp footer footer footer ";
+  gap: 10px;
+  /* background-color: #2196f3; */
+  padding: 10px;
+}
+
+#svg {
+  height: 40rem;
+  display: block;
+}
+.data {
+  display: inline-flexbox;
+  align-self: center;
+}
+.data > h2 {
+  font-size: 2rem;
+  margin: auto;
+  background: linear-gradient(90deg, #f441a5, #03a9f4, #f441a5, #41a5e7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Nav Bar */
+#top {
+  display: none;
+}
+.nav-bar {
+  margin: 0 auto;
+  text-decoration: none;
+  display: inline-block;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  position: -ms-page;
+}
+.nav-bar ul li a,
+ul a {
+  display: flex;
+  text-decoration: none;
+}
+.nav-bar ul li a > i {
+  color: black;
+  align-self: flex-start;
+}
+.nav-bar ul {
+  list-style-type: none;
+}
+/* typing Effect */
+.sentence {
+  margin-right: 8px;
+}
+.typing-container {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.input-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  margin-left: 8px;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.input-cursor {
+  animation: blink 0.6s linear infinite alternate;
+}
+.menu-heading {
+  background: -webkit-linear-gradient(left top, blue, #81c3f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu-heading:hover {
+  color: white;
+  cursor: context-menu;
+}
+
+.break {
+  width: 90%;
+  height: 50px;
+  align-self: center;
+  margin: auto 0;
+  color: #c3c3c3;
+}
+
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  /* justify-content: center; */
+}
+
+.cta i {
+  /* margin: auto; */
+  padding: auto;
+  align-self: flex-start;
+  display: inline-block;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Nav Mobile */
+@media only screen and (max-width: 768px) {
+  .cta {
+    justify-content: center;
+  }
+  #left {
+    display: none;
+  }
+  #top {
+    background: #2f66f0;
+    /* display: none; */
+    width: 100%;
+    align-items: top;
+  }
+  #top .nav-bar {
+    justify-content: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  #top .nav-bar ul li a {
+    display: flex;
+    text-decoration: none;
+  }
+  #top .nav-bar ul li a > i {
+    color: black;
+    align-self: flex-start;
+  }
+  #top .nav-bar ul {
+    list-style-type: none;
+  }
+  #top .typing-container {
+    /* display: flex; */
+    justify-content: center;
+    /* align-items: center; */
+  }
+}
+
+/* FAQ */
+
+.faq {
+  height: 100vh;
+}
+
+/* What is Hackathon */
+.loader {
+  position: absolute;
+  left: 80%;
+  right: 20%;
+  z-index: 10;
+  width: 160px;
+  height: 100px;
+  margin-left: -80px;
+  margin-top: -50px;
+  border-radius: 5px;
+  background: #1e3f57;
+  animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+}
+
+.loader:nth-child(2) {
+  z-index: 11;
+  width: 150px;
+  height: 90px;
+  margin-top: -45px;
+  margin-left: -75px;
+  border-radius: 3px;
+  background: #3c517d;
+  animation-name: dot2_;
+}
+
+.loader:nth-child(3) {
+  z-index: 12;
+  width: 40px;
+  height: 20px;
+  margin-top: 50px;
+  margin-left: -20px;
+  border-radius: 0 0 5px 5px;
+  background: #6bb2cd;
+  animation-name: dot3_;
+}
+
+@keyframes dot1_ {
+  3%,
+  97% {
+    width: 160px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -80px;
+  }
+
+  30%,
+  36% {
+    width: 80px;
+    height: 120px;
+    margin-top: -60px;
+    margin-left: -40px;
+  }
+
+  63%,
+  69% {
+    width: 40px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -20px;
+  }
+}
+
+@keyframes dot2_ {
+  3%,
+  97% {
+    height: 90px;
+    width: 150px;
+    margin-left: -75px;
+    margin-top: -45px;
+  }
+
+  30%,
+  36% {
+    width: 70px;
+    height: 96px;
+    margin-left: -35px;
+    margin-top: -48px;
+  }
+
+  63%,
+  69% {
+    width: 32px;
+    height: 60px;
+    margin-left: -16px;
+    margin-top: -30px;
+  }
+}
+
+@keyframes dot3_ {
+  3%,
+  97% {
+    height: 20px;
+    width: 40px;
+    margin-left: -20px;
+    margin-top: 50px;
+  }
+
+  30%,
+  36% {
+    width: 8px;
+    height: 8px;
+    margin-left: -5px;
+    margin-top: 49px;
+    border-radius: 8px;
+  }
+
+  63%,
+  69% {
+    width: 16px;
+    height: 4px;
+    margin-left: -8px;
+    margin-top: -37px;
+    border-radius: 10px;
+  }
+}
+
+#hackathon {
+  width: 60%;
+}
