@@ -5,27 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/49ae0caa8c.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/49ae0caa8c.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"
       integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg=="
       crossorigin="anonymous"
     ></script>
+    <!-- <script src="./index.js"></script> -->
     <title>WCE Hackathon 2023 | WCE ACM</title>
   </head>
   <body>
     <div id="home">
-      <div class="nav-bar">
+      
+      <div id="nav-bar" class="nav-box">
+          <h1>
+            <a href="#" class="logo"> WCE ACM </a>
+          </h1>
         <ul>
-          <a class="cta" href="#">
-            <li class="menu-heading">WCE ACM</li>
-          </a>
+
+          <div> 
           <li>
-            <a class="cta">
+            <a href="#start" class="cta">
               <i class="fa fa-home fa-lg"></i>
               <span class="hover-underline-animation">
                 Home
@@ -33,7 +34,15 @@
             </a>
           </li>
           <li>
-            <a class="cta">
+            <a href="#problem"class="cta">
+              <i class="fa fa-question"></i>
+              <span class="hover-underline-animation">
+                Themes
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#faq"class="cta">
               <i class="fa fa-question"></i>
               <span class="hover-underline-animation">
                 FAQ
@@ -49,29 +58,33 @@
               </span>
             </a>
           </li>
-          <!-- <p>This is nav</p> -->
+          </div>
         </ul>
       </div>
-      <div class="home">
+      
+      <!-- Hackathon'23 + what is Hackathon -->
+      <div id="start" class="home">
         <div class="front">
           <div class="data">
             <h2>
               WCE <br />
               HACKATHON'23
             </h2>
-            <!-- to add js type effect -->
+            <!-- to add js type effect --> 
             <div class="typing-container">
               <span id="sentence" class="sentence">Here, take this </span>
               <span id="feature-text"></span>
               <span class="input-cursor"></span>
             </div>
 
-            <div class="btn">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Consequuntur, impedit.
+            <div>
+              <a class="btn">
+              <!-- <i class="fa fa-trophy fa-lg"></i> -->
+                Participate </a>
             </div>
           </div>
-          <div id="svg"></div>
+          
+            <div id="svg"></div>
         </div>
         <div class="hackathon">
           <div id="hackathon">
@@ -82,6 +95,7 @@
               Voluptatibus, dolores dolore. Iste, aperiam in excepturi quidem
               illum voluptatem corporis eligendi!
             </p>
+            
             <div class="container">
               <div class="loader"></div>
               <div class="loader"></div>
@@ -90,10 +104,7 @@
           </div>
         </div>
       </div>
-      <div class="temp">
-        <p>This</p>
-      </div>
-      <div class="problem">
+      <div id="problem" class="problem">
         <p>This is problem</p>
       </div>
       <div class="prizes">
@@ -102,7 +113,7 @@
       <div class="sponcers">
         <p>This is Sponcers</p>
       </div>
-      <div class="faq">
+      <div id="faq" class="faq">
         <p>This is faq</p>
       </div>
     </div>
@@ -111,8 +122,19 @@
       <p>This is footer</p>
     </footer>
   </body>
+  <style>
+  .nav-box {
+  background-color: #f441a5;
+  padding: 10px 10px;
+   position: sticky;
+  top: 0;
+  border-radius: 10px;
+  /* opacity: 0; */
+}
+    </style>
 
   <script>
+    // lottie 
     var animation = bodymovin.loadAnimation({
       // animationData: { /* ... */ },
       container: document.getElementById("svg"), // required
@@ -122,7 +144,7 @@
       autoplay: true, // optional
       name: "Demo Animation" // optional
     });
-
+// Typing Effect
     const carouselText = [
       { text: "Prople", color: "red" },
       { text: "Mentor", color: "orange" },
@@ -178,5 +200,51 @@
     function waitForMs(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
     }
+    
+    // Smooth Scrolling
+
+$(document).ready(function () {
+  $("a").on("click", function (event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top - 110,
+        },
+        1500,
+        function () {
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash - 100;
+        }
+      );
+    } // End if
+  });
+});
+
+//Sticky Menu
+window.addEventListener("scroll", function () {
+  var v = document.getElementById("nav-bar");
+  if (window.scrollY > 2) {
+    this.document.querySelector('.nav-box').style.opacity = 1;
+    // v.className += "nav-box";
+      // v.classList.add("nav-box") ;
+      // v.setAttribute("class","nav-box");
+      // v.classList.toggle("nav-box");
+      console.log("Done");
+  }
+  else {
+    // v.className -= "nav-box";
+    this.document.querySelector('.nav-box').style.opacity = 0;
+  }
+});
+
   </script>
 </html>
