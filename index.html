@@ -15,12 +15,12 @@
       integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg=="
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="./index.js"></script> -->
+    <script src="./index.js"></script>
     <title>WCE Hackathon 2023 | WCE ACM</title>
   </head>
   <body>
     <div id="home">
-      <div id="nav-bar" class="nav-box">
+      <div id="nav-bar">
         <h1>
           <a href="#" class="logo"> WCE ACM </a>
         </h1>
@@ -38,24 +38,24 @@
               <a href="#problem" class="cta">
                 <i class="fa fa-question"></i>
                 <span class="hover-underline-animation">
-                  Themes
+                  Problems
                 </span>
               </a>
             </li>
             <li>
-              <a href="#faq" class="cta">
-                <i class="fa fa-question"></i>
+              <a href="#prizes" class="cta">
+                <i class="fa fa-trophy"></i>
                 <span class="hover-underline-animation">
-                  FAQ
+                  Prizes
                 </span>
               </a>
             </li>
 
             <li>
-              <a class="cta">
-                <i class="fa fa-trophy fa-lg"></i>
+              <a href="#faq" class="cta">
+                <i class="fa fa-question fa-lg"></i>
                 <span class="hover-underline-animation">
-                  Prizes
+                  FAQ
                 </span>
               </a>
             </li>
@@ -109,7 +109,7 @@
       <div id="problem" class="problem">
         <p>This is problem</p>
       </div>
-      <div class="prizes">
+      <div class="prizes" id="prizes">
         <p>This is prizes</p>
       </div>
       <div class="sponcers">
@@ -410,19 +410,6 @@
     });
 
     //Sticky Menu
-    window.addEventListener("scroll", function () {
-      var v = document.getElementById("nav-bar");
-      if (window.scrollY > 2) {
-        this.document.querySelector(".nav-box").style.opacity = 1;
-        // v.className += "nav-box";
-        // v.classList.add("nav-box") ;
-        // v.setAttribute("class","nav-box");
-        // v.classList.toggle("nav-box");
-        console.log("Done");
-      } else {
-        // v.className -= "nav-box";
-        this.document.querySelector(".nav-box").style.opacity = 0;
-      }
-    });
+    // in script.js
   </script>
 </html>
