@@ -13,11 +13,11 @@ body {
 }
 .faq {
   grid-area: faq;
-  height: 30vh;
+  height: auto;
 }
 .hackathon {
   grid-area: hackathon;
-  height: 20vh;
+  height: 40vh;
 }
 .problem {
   grid-area: problem;
@@ -31,7 +31,7 @@ body {
   grid-area: sponcers;
   height: 20vh;
 }
-.footer {
+#footer {
   grid-area: footer;
   height: 30vh;
 }
@@ -67,9 +67,9 @@ body {
   align-self: center;
 }
 .data > h2 {
-  font-size: 2rem;
+  font-size: 4rem;
   margin: auto;
-  background: linear-gradient(90deg, #f441a5, #03a9f4, #f441a5, #41a5e7);
+  background: linear-gradient(90deg, #f441a5, #cd00cd, #f441a5, #cd00cd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -263,7 +263,112 @@ ul a {
 /* FAQ */
 
 .faq {
-  height: 100vh;
+  /* height: 100vh; */
+  display: grid;
+  grid-template-areas:
+    "c1 c2"
+    "c3 c4"
+    "c5 c6"
+    "c7 c8";
+  gap: 15px;
+}
+
+#c1 {
+  grid-area: c1;
+}
+#c2 {
+  grid-area: c2;
+}
+#c3 {
+  grid-area: c3;
+}
+#c4 {
+  grid-area: c4;
+}
+#c5 {
+  grid-area: c5;
+}
+#c6 {
+  grid-area: c6;
+}
+#c7 {
+  grid-area: c7;
+}
+#c8 {
+  grid-area: c8;
+}
+
+.card {
+  width: 400px;
+  height: 140px;
+  transition: all 0.5s;
+  box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11),
+    -15px -15px 30px rgba(60, 60, 60, 0.082);
+  text-align: center;
+  overflow: hidden;
+}
+
+.card:hover {
+  height: 275px;
+  background: linear-gradient(360deg, #edededc5 60%, hsla(0, 0%, 13%, 1) 70%);
+}
+
+.card .header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+  margin-bottom: 16px;
+}
+
+.card .header .img-box {
+  width: 50px;
+}
+
+.card .header .title {
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 4px 0 14px 0;
+  transition: all 0.5s;
+  color: #edededc5;
+}
+
+.card:hover .header {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+}
+
+.card:hover .card .header .title {
+  padding: 0;
+}
+
+.card .content {
+  display: block;
+  text-align: center;
+  color: #212121;
+  margin: 0 18px;
+}
+
+.card .content p {
+  transition: all 0.5s;
+  font-size: 1.3em;
+  margin-bottom: 8px;
+}
+
+.card .content a {
+  color: #1d8122;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.card .content .btn-link:hover {
+  border-bottom: 1px solid #1d8122;
 }
 
 /* What is Hackathon */
