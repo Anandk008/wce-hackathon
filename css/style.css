@@ -1,8 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  background: #2196f3;
+  background: #000;
+  color: white;
 }
+
+/*  Colors
+blue - #2196f3 
+pink - #f441a5
+
+*/
 #nav-bar {
   grid-area: header;
   height: 50px;
@@ -18,6 +25,7 @@ body {
 .hackathon {
   grid-area: hackathon;
   height: 40vh;
+  color: white;
 }
 .problem {
   grid-area: problem;
@@ -36,24 +44,25 @@ body {
   height: 30vh;
 }
 
-.grid-container > div {
+/* .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
-}
+} */
 
 #home {
+  margin: auto;
   display: grid;
   grid-template-areas:
-    "temp header header header"
-    "temp home home home"
-    "temp hackathon hackathon hackathon"
-    "temp problem problem problem"
-    "temp prize prize prize"
-    "temp sponcers sponcers sponcers"
-    "temp faq faq faq"
-    "temp footer footer footer";
+    "temp  header header"
+    "temp  home home"
+    "temp  hackathon hackathon"
+    "temp  problem problem"
+    "temp  prize prize"
+    "temp  sponcers sponcers"
+    "temp  faq faq"
+    "temp  footer footer";
   gap: 10px;
   /* background-color: #2196f3; */
 }
@@ -65,6 +74,7 @@ body {
 .data {
   display: inline-flexbox;
   align-self: center;
+  color: white;
 }
 .data > h2 {
   font-size: 4rem;
@@ -84,31 +94,35 @@ body {
   margin: 0 5%;
 }
 .nav-box {
-  background-color: #f441a5;
-  padding: 10px 10px;
+  top: 0;
+  background-color: #111;
+  padding: 5px 5px;
+  border: 2px solid #888;
   border-radius: 10px;
-  z-index: 10;
+  z-index: 5;
   transition: 1s ease-in-out;
 }
 #nav-bar ul li a,
 ul a {
   text-decoration: none;
-  padding-top: 20px;
 }
 .logo {
   display: block;
   text-decoration: none;
   list-style: none;
-  color: #000;
+  color: #fff;
   margin-left: 20px;
 }
 .logo:hover {
-  color: white;
+  color: #2196f3;
   cursor: context-menu;
 }
 #nav-bar ul li a > i {
-  color: black;
+  color: #ccc;
   padding: 10px;
+}
+#nav-bar ul li a > i:hover {
+  color: #2196f3;
 }
 #nav-bar ul {
   display: flex;
@@ -167,8 +181,6 @@ ul a {
   border: none;
   background: none;
   cursor: pointer;
-  padding: 10px;
-  margin: 10px;
   /* justify-content: center; */
 }
 
@@ -202,7 +214,7 @@ ul a {
 
 .hover-underline-animation {
   position: relative;
-  color: black;
+  color: #2196f3;
   padding-bottom: 20px;
 }
 
@@ -214,7 +226,7 @@ ul a {
   height: 4px;
   bottom: 0;
   left: 0;
-  background-color: #000000;
+  background-color: #2196f3;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -229,36 +241,6 @@ ul a {
   .cta {
     justify-content: center;
   }
-  #left {
-    display: none;
-  }
-  #top {
-    background: #2f66f0;
-    /* display: none; */
-    width: 100%;
-    align-items: top;
-  }
-  #top .nav-bar {
-    justify-content: center;
-    text-decoration: none;
-    display: inline-block;
-  }
-  #top .nav-bar ul li a {
-    display: flex;
-    text-decoration: none;
-  }
-  #top .nav-bar ul li a > i {
-    color: black;
-    align-self: flex-start;
-  }
-  #top .nav-bar ul {
-    list-style-type: none;
-  }
-  #top .typing-container {
-    /* display: flex; */
-    justify-content: center;
-    /* align-items: center; */
-  }
 }
 
 /* FAQ */
@@ -271,7 +253,7 @@ ul a {
     "c3 c4"
     "c5 c6"
     "c7 c8";
-  gap: 15px;
+  gap: 30px;
 }
 
 #c1 {
@@ -301,10 +283,10 @@ ul a {
 
 .card {
   width: 400px;
-  height: 140px;
+  height: 150px;
   transition: all 0.5s;
-  box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11),
-    -15px -15px 30px rgba(60, 60, 60, 0.082);
+  box-shadow: 10px 10px 20px rgb(102, 101, 101),
+    -10px -10px 20px rgba(56, 54, 54, 0.082);
   text-align: center;
   overflow: hidden;
 }
