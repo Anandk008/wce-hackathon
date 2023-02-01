@@ -20,6 +20,9 @@
       integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg=="
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
     <script src="./index.js"></script>
     <title>WCE Hackathon 2023 | WCE ACM</title>
   </head>
@@ -116,14 +119,50 @@
         <p>This is problem</p>
       </div>
       <div class="prizes" id="prizes">
-        <p>This is prizes</p>
+        <div class="PrizeHeading">
+          <h1>Prize Section</h1>
+        </div>
+        <div class="winners">
+        
+          <div class="second">
+            <img src="./images/silvermedal.png" alt="">
+            <h2>Runner-Up</h2>
+            <p style="color:#edeaea">Rs. 15,000 prize will be given to the second best project of the hackathon</p>
+          </div>
+
+          <div class="first">
+            <img src="./images/goldmedal.png" alt="">
+            <h2>Winner</h2>
+            <p style="color:#edeaea">Rs. 20,000 prize will be given to a project that outstands all other submissions</p>
+          </div>
+          
+          <div class="third">
+            <img src="./images/bronzemedal.png" alt="">
+            <h2>2nd Runner-Up</h2>
+            <p style="color:#edeaea">Rs. 10,000 prize will be given to Best third overall project of the hackathon</p>
+          
+          </div>
+        
+        </div>
+        
+        
       </div>
-      <div class="sponcers">
-        <p>This is Sponcers</p>
+
+      <!-- SPONSER & Partners CARD -->
+      <div class="sponsors">
+        <div class="Scard">
+            <h2><span class="actual-text">&nbsp;Sponsors & Partners&nbsp;</span>
+            <span class="hover-text" aria-hidden="true">&nbsp;Sponsors & Partners&nbsp;</span></h2>
+        </div>
+
+         <div class="sponsorlogo">
+          <a href="https://www.finiq.com/" target="_blank"><img src="../images/finiqlogo.png" height="100px" widdth="100px" alt="FinIQ" class="sponsor-img"></img></a>
+        </div>
       </div>
+      </div>
+      
 
       <!-- <p>This is faq</p> -->
-
       <div id="faq" class="faq">
         <div class="card" id="c1">
           <div class="header">
@@ -305,12 +344,18 @@
     </div>
 
     <footer id="footer">
-      <p>This is footer</p>
+        <div class="social-links">
+        <a href="https://discord.gg/YdFGxdsv" target="_blank" class="social"> <img src="./images/disc.png" alt=""  class="icDiscord"> </a>
+        <a href="https://www.instagram.com/wce_acm/" target="_blank" class="social" ><img src="./images/insta24.png" alt="" class="icInstagram"> </a>
+        <a href="https://www.linkedin.com/company/wce-acm-student-chapter/" target="_blank" class="social"><img src="./images/linkedin64.png" alt="" class="icLinkedin"> </a>
+        <a href="https://twitter.com/wce_acm" target="_blank"class="social" ><img src="./images/twitter.png" alt="" class="icTwitter"></a>
+        <a href="mailto:wceacmsc@gmail.com"  class="social"><img src="./images/mail.png" alt="" class="icEmail"></a>
+      </div>
     </footer>
   </body>
   <style>
     .nav-box {
-      background-color: #f441a5;
+      background-color: #000000;
       padding: 10px 10px;
       position: sticky;
       top: 0;

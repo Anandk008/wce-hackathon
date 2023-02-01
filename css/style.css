@@ -3,6 +3,7 @@ body {
   padding: 0;
   background: #000;
   color: white;
+  font-family: 'Nunito', sans-serif;
 }
 
 /*  Colors
@@ -12,13 +13,14 @@ pink - #f441a5
 */
 #nav-bar {
   grid-area: header;
-  height: 50px;
+  height: 55px;
 }
 .home {
   grid-area: home;
   /* height: 100vh; */
 }
 .faq {
+  margin-top: 120px;
   grid-area: faq;
   height: auto;
 }
@@ -29,17 +31,15 @@ pink - #f441a5
 }
 .problem {
   grid-area: problem;
-  height: 50vh;
+  
 }
-.prizes {
-  grid-area: prize;
-  height: 30vh;
-}
-.sponcers {
+
+.sponsors {
   grid-area: sponcers;
-  height: 20vh;
+  height: 30vh;
+  margin-top: 100px;
 }
-#footer {
+#footer{
   grid-area: footer;
   height: 30vh;
 }
@@ -95,9 +95,9 @@ pink - #f441a5
 }
 .nav-box {
   top: 0;
-  background-color: #111;
+  
   padding: 5px 5px;
-  border: 2px solid #888;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 10px;
   z-index: 5;
   transition: 1s ease-in-out;
@@ -243,10 +243,173 @@ ul a {
   }
 }
 
+/* PRIZES card  */
+.prizes {
+  grid-area: prize;
+  background-color: #6bb2cd;
+  height: 22rem;
+  width: 75rem;
+}
+
+.PrizeHeading{
+  /* font-size: 5rem;
+    margin-bottom: 2rem; */
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+}
+.winners{
+  display: flex;
+  flex-direction: row;
+}
+
+.first{
+  color: #000;
+  text-align: center;
+}
+
+.second{
+  color: #000;
+  text-align: center;
+  margin-top: 50px;
+}
+.third{
+  color: #000;
+  text-align: center;
+  margin-top: 50px; 
+}
+
+/* Sponser CARD */
+
+.Scard {
+  margin-top: 50px;
+  margin: 2em;
+  max-width: 200em;
+  height: 5em;
+  background: #000000;
+  position: relative;
+  display: flex;
+
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.Scard h2 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+
+.Scard::before {
+  content: '';
+  position: absolute;
+  width: 300em;
+  background-image: linear-gradient(180deg, rgb(255, 204, 0), rgb(48, 255, 214));
+  height: 130%;
+  animation: rotBGimg 8s linear infinite;
+  transition: all 0.4s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Scard::after {
+  content: '';
+  position: absolute;
+  background: #000000;
+  ;
+  inset: 0.3em;
+  border-radius: 15px;
+} 
+
+.Scard h2{
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #ffd037;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+.Scard h2:hover .hover-text{
+  width: 100%;
+  filter: drop-shadow(0 0 100px var(--animation-color))
+}
+
+
+/* sponsor-logo-img */
+.sponsorlogo {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 10;
+}
+
+.sponsor-img{
+  animation: bounce 2s ease-in-out infinite;
+
+}
+.sponsor-img {
+
+  /* background-color:rgba(0,255,0,0); */
+  
+  box-shadow: 0 0 25px rgb(0,0,0,0);
+}
+
+.sponsor-img:hover {
+  box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
+}
+
+
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+
 /* FAQ */
 
 .faq {
   /* height: 100vh; */
+  margin-left: 50px;
   display: grid;
   grid-template-areas:
     "c1 c2"
@@ -285,8 +448,8 @@ ul a {
   width: 400px;
   height: 150px;
   transition: all 0.5s;
-  box-shadow: 10px 10px 20px rgb(102, 101, 101),
-    -10px -10px 20px rgba(56, 54, 54, 0.082);
+  /* box-shadow: 10px 10px 20px rgb(102, 101, 101), */
+    /* -10px -10px 20px rgba(56, 54, 54, 0.082); */
   text-align: center;
   overflow: hidden;
 }
@@ -473,4 +636,50 @@ ul a {
 
 #hackathon {
   width: 60%;
+}
+
+/* FOOTER */
+footer {
+  background-color: #07182E;
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-links a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+  
+}
+.social-links .social{
+  max-width: 100px;
+  text-align: center;
+
+}
+.social-links img {
+  margin-right: 30px;
+  height: 40px;
+  width: 40px;
+}
+.social-links .icDiscord:hover{
+  cursor: url(../images/discord24.png),auto;
+  opacity: 0.1;
+}
+
+.social-links .icInstagram:hover{
+  cursor: url(../images/instag24.png),auto;
+  opacity: 0.1;
+}
+.social-links .icLinkedin:hover{
+  cursor: url(../images/linked24.png),auto;
+  opacity: 0.1;
+}
+.social-links .icTwitter:hover{
+  cursor: url(../images/twitter24.png),auto;
+  opacity: 0.1;
+}
+.social-links .icEmail:hover{
+  cursor: url(../images/email24.png),auto;
+  opacity: 0.1;
 }
