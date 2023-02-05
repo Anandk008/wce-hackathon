@@ -1,0 +1,42 @@
+.cta {
+  justify-content: center;
+}
+.faq {
+  /* height: 100vh; */
+  /* margin-left: 10px; */
+  display: grid;
+  grid-template-areas:
+    "c1 "
+    "c2 "
+    "c3 "
+    "c4 "
+    "c5"
+    "c6"
+    "c7"
+    "c8";
+  /* gap: 30px; */
+  /* width: 80%; */
+  justify-content: center;
+}
+.card:hover {
+  height: auto;
+  padding-bottom: 30px;
+  transition: ease-in-out;
+  transition: 2s;
+}
+.card {
+  width: 80%;
+}
+#nav-bar {
+  display: inline-block;
+  height: auto;
+}
+#nav-bar ul {
+  display: flex;
+}
+#nav-bar li a > span {
+  display: none;
+}
+.nav-box {
+  width: auto;
+}

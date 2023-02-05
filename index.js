@@ -1,19 +1,19 @@
 //Sticky Menu
 window.addEventListener("scroll", function () {
   var v = document.getElementById("nav-bar");
-  let a = document.getElementsByClassName("logo");
+  let a = document.getElementById("togel");
   if (window.scrollY > 3) {
     // this.document.querySelector(".nav-box").style.opacity = 1;
     if (v.classList !== "nav-box") {
       v.className += "nav-box ";
-      v.innerHTML  = "IEE CELL";
+      a.innerHTML = `<a href="#" class="logo"> IIE CELL </a>`;
     }
     // v.classList.add("nav-box") ;
     // v.setAttribute("class","nav-box");
     // v.classList.toggle("nav-box");
   } else {
-    v.className = "nav"; 
-    v.innerHTML = "WCE ACM";     
+    v.className = "nav";
+    a.innerHTML = `<a href="#" class="logo"> WCE ACM </a>`;
 
     // this.document.querySelector(".nav-box").style.opacity = 0;
   }
