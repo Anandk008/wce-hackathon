@@ -1,16 +1,20 @@
 //Sticky Menu
 window.addEventListener("scroll", function () {
   var v = document.getElementById("nav-bar");
+  let a = document.getElementsByClassName("logo");
   if (window.scrollY > 3) {
     // this.document.querySelector(".nav-box").style.opacity = 1;
     if (v.classList !== "nav-box") {
       v.className += "nav-box ";
+      v.innerHTML  = "IEE CELL";
     }
     // v.classList.add("nav-box") ;
     // v.setAttribute("class","nav-box");
     // v.classList.toggle("nav-box");
   } else {
-    v.className = "nav";
+    v.className = "nav"; 
+    v.innerHTML = "WCE ACM";     
+
     // this.document.querySelector(".nav-box").style.opacity = 0;
   }
 });

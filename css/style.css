@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #000;
+  background: #111;
   color: white;
   font-family: 'Nunito', sans-serif;
 }
@@ -41,7 +41,7 @@ pink - #f441a5
 }
 #footer{
   grid-area: footer;
-  height: 30vh;
+  height: 10vh;
 }
 
 /* .grid-container > div {
@@ -94,11 +94,11 @@ pink - #f441a5
   margin: 0 5%;
 }
 .nav-box {
-  top: 0;
-  
+  /* margin: 5px; */
+  top: 5px;
   padding: 5px 5px;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
   z-index: 5;
   transition: 1s ease-in-out;
 }
@@ -246,7 +246,7 @@ ul a {
 /* PRIZES card  */
 .prizes {
   grid-area: prize;
-  background-color: #6bb2cd;
+  background-color: #000000;
   height: 22rem;
   width: 75rem;
 }
@@ -256,26 +256,27 @@ ul a {
     margin-bottom: 2rem; */
     font-weight: 700;
     text-align: center;
-    color: #000;
+    color: rgb(252, 51, 245);
     font-family: 'Nunito', sans-serif;
 }
 .winners{
+  
   display: flex;
   flex-direction: row;
 }
 
 .first{
-  color: #000;
+  color: rgb(252, 70, 70);
   text-align: center;
 }
 
 .second{
-  color: #000;
+  color: rgb(29, 198, 255);
   text-align: center;
   margin-top: 50px;
 }
 .third{
-  color: #000;
+  color: rgb(77, 241, 99);
   text-align: center;
   margin-top: 50px; 
 }
