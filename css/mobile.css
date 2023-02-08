@@ -30,6 +30,8 @@
 #nav-bar {
   display: inline-block;
   height: auto;
+  justify-content: center;
+  margin: auto;
 }
 #nav-bar ul {
   display: flex;
@@ -38,5 +40,40 @@
   display: none;
 }
 .nav-box {
-  width: auto;
+  width: 80%;
+  z-index: 50;
+}
+.hackathon {
+  margin-left: 50px;
+}
+#hackathon {
+  margin-top: 100px;
+  display: block;
+}
+.front {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+}
+.loader {
+  left: 40%;
+  right: 40%;
+  width: 140px;
+  height: 80px;
+}
+.sponsors {
+  width: 80%;
+}
+
+#hackathon1 {
+  display: hidden;
+  color: #111;
+  margin: 10px;
+}
+#hackathon {
+  width: 50%;
+}
+.hackathon {
+  height: 50vh;
 }
