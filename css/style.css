@@ -1,32 +1,35 @@
-.wrapper{
+.wrapper {
   max-height: 300px;
   width: 600px;
- border-radius: 10px;
+  border-radius: 10px;
   display: flex;
   overflow-x: auto;
   margin-left: 30vw;
   margin-right: 20vw;
 }
 
-.wrapper::-webkit-scrollbar{
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.wrapper::-webkit-scrollbar {
   width: 0;
 }
 
-
-
-.wrapper .item{
+.wrapper .item {
   min-width: 500px;
   border-bottom-right-radius: 10px;
   height: 200px;
   line-height: 110px;
   text-align: center;
   background-color: black;
-  border:2px solid #e40ff3;
+  border: 2px solid #e40ff3;
   padding-top: 5vh;
   font-size: 2em;
   margin-right: 50px;
   border-radius: 10px;
-  
 }
 
 body {
@@ -65,7 +68,6 @@ pink - #f441a5
   padding-left: 10vw;
   text-align: justify;
   padding-top: 5vh;
-
 }
 
 .problem {
@@ -176,6 +178,63 @@ ul a {
   justify-content: space-between;
   flex-direction: row;
 }
+/* Button */
+button {
+  margin-left: 5px;
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+button:hover span {
+  background: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+.align {
+  display: flex;
+  flex-direction: row;
+}
 
 /* SVG BLOCK */
 .front {
@@ -189,8 +248,8 @@ ul a {
 }
 .typing-container {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
+  font-size: 30px;
 }
 .input-cursor {
   display: inline-block;
@@ -300,11 +359,13 @@ ul a {
 
 /* PRIZES card  */
 .prizes {
+  margin-top: 20px;
   grid-area: prize;
   background-color: #000000;
   height: 25rem;
   width: 70rem;
-  margin-inline: 12vw;
+  margin-inline: 8vw;
+  padding: 20px;
 }
 
 .PrizeHeading {
@@ -341,13 +402,13 @@ ul a {
 
 .Scard {
   margin-top: 50px;
-  margin: 2em;
-  max-width: 200em;
+  margin: auto;
+  width: 90%;
   height: 5em;
   background: #000000;
   position: relative;
   display: flex;
-
+  margin-bottom: 50px;
   place-content: center;
   place-items: center;
   overflow: hidden;
@@ -434,10 +495,10 @@ ul a {
 
 .sponsor-img {
   animation: bounce 2s ease-in-out infinite;
+  margin-left: 20px;
 }
 .sponsor-img {
   /* background-color:rgba(0,255,0,0); */
-
   box-shadow: 0 0 25px rgb(0, 0, 0, 0);
 }
 
@@ -693,6 +754,9 @@ ul a {
 #hackathon {
   width: 60%;
   overflow: hidden;
+}
+#hackathon1 {
+  font-size: 0;
 }
 
 /* FOOTER */

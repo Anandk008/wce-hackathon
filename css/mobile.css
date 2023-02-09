@@ -1,3 +1,62 @@
+#nav-bar {
+  grid-area: header;
+}
+.home {
+  grid-area: home;
+}
+.faq {
+  grid-area: faq;
+}
+.prizes {
+  margin-top: 20px;
+  grid-area: prize;
+  background-color: #000000;
+  height: auto;
+  width: 70%;
+  margin: 0;
+}
+
+.hackathon {
+  grid-area: hackathon;
+  padding: 10px;
+  text-align: justify;
+}
+.problem {
+  grid-area: problem;
+  margin-top: 80px;
+}
+.sponsors {
+  grid-area: sponcers;
+}
+#footer {
+  grid-area: footer;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+/* #home {
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "home"
+    "hackathon"
+    "problem "
+    "prize "
+    "sponcers "
+    "faq "
+    "footer ";
+} */
+
+.nav-box {
+  /* margin: 5px; */
+  width: 30%;
+}
+
 .cta {
   justify-content: center;
 }
@@ -40,11 +99,8 @@
   display: none;
 }
 .nav-box {
-  width: 80%;
+  width: 50%;
   z-index: 50;
-}
-.hackathon {
-  margin-left: 50px;
 }
 #hackathon {
   margin-top: 100px;
@@ -63,16 +119,16 @@
   height: 80px;
 }
 .sponsors {
-  width: 80%;
+  width: 70%;
 }
 
 #hackathon1 {
   display: hidden;
   color: #111;
-  margin: 10px;
+  margin: 50px;
 }
 #hackathon {
-  width: 50%;
+  width: 60%;
 }
 .hackathon {
   height: 50vh;
