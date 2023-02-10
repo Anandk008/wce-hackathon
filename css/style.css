@@ -19,7 +19,7 @@ body {
 }
 
 .wrapper .item {
-  min-width: 500px;
+  min-width: min-content;
   border-bottom-right-radius: 10px;
   height: 200px;
   line-height: 110px;
@@ -405,7 +405,7 @@ button a {
   margin-top: 50px;
   margin: auto;
   width: 90%;
-  height: 5em;
+  height: auto;
   background: #000000;
   position: relative;
   display: flex;
@@ -420,6 +420,7 @@ button a {
   z-index: 1;
   color: white;
   font-size: 2em;
+  margin-left: 5px;
 }
 
 .Scard::before {

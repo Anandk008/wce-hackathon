@@ -27,6 +27,8 @@
 }
 .sponsors {
   grid-area: sponcers;
+  height: auto;
+  width: 90%;
 }
 #footer {
   grid-area: footer;
@@ -38,19 +40,9 @@ body {
   overflow-x: scroll;
 }
 
-/* #home {
-  margin: auto;
-  display: grid;
-  grid-template-areas:
-    "header"
-    "home"
-    "hackathon"
-    "problem "
-    "prize "
-    "sponcers "
-    "faq "
-    "footer ";
-} */
+#home {
+  margin: 0;
+}
 
 .nav-box {
   /* margin: 5px; */
@@ -121,6 +113,11 @@ body {
   height: 80px;
 }
 .sponsors {
+  width: 50%;
+  height: auto;
+  padding: 10px;
+}
+.Scard {
   width: 70%;
 }
 
@@ -134,4 +131,20 @@ body {
 }
 .hackathon {
   height: 50vh;
+}
+.wrapper .item {
+  min-width: 500px;
+  border-bottom-right-radius: 10px;
+  height: auto;
+  line-height: 110px;
+  text-align: center;
+  background-color: black;
+  border: 2px solid #e40ff3;
+  /* padding-top: 5vh; */
+  font-size: 2em;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+.wrapper {
+  margin: auto;
 }
