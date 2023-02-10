@@ -90,7 +90,9 @@ body {
   display: inline-block;
   height: auto;
   justify-content: center;
-  margin: auto;
+  padding: 10px;
+  max-width: max-content;
+  min-width: min-content;
 }
 #nav-bar ul {
   display: flex;
@@ -99,8 +101,8 @@ body {
   display: none;
 }
 .nav-box {
-  width: 50%;
-  z-index: 50;
+  width: 90%;
+  z-index: 5;
 }
 #hackathon {
   margin-top: 100px;
