@@ -19,7 +19,7 @@ body {
 }
 
 .wrapper .item {
-  min-width: min-content;
+  min-width: 500px;
   border-bottom-right-radius: 10px;
   height: 200px;
   line-height: 110px;

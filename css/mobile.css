@@ -133,7 +133,7 @@ body {
   height: 50vh;
 }
 .wrapper .item {
-  min-width: 500px;
+  min-width: min-content;
   border-bottom-right-radius: 10px;
   height: auto;
   line-height: 110px;
