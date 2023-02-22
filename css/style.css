@@ -52,13 +52,12 @@ pink - #f441a5
 }
 .home {
   grid-area: home;
-  /* height: 100vh; */
 }
 .faq {
-  margin-top: 120px;
+  margin-top: 50px;
   grid-area: faq;
   height: auto;
-  padding-left: 10vw;
+  padding-left: 5%;
 }
 
 .hackathon {
@@ -72,11 +71,12 @@ pink - #f441a5
 
 .problem {
   grid-area: problem;
+  margin-bottom: 5%;
 }
 
 .sponsors {
   grid-area: sponcers;
-  height: 30vh;
+  /* height: 30vh; */
   margin-top: 100px;
 }
 #footer {
@@ -115,6 +115,7 @@ pink - #f441a5
   display: inline-flexbox;
   align-self: center;
   color: white;
+  width: 90%;
 }
 .data > h2 {
   font-size: 4rem;
@@ -131,7 +132,7 @@ pink - #f441a5
   display: flex;
   justify-content: space-between;
   min-width: 800px;
-  margin: 0 5%;
+  margin: 0 8%;
 }
 .nav-box {
   background: linear-gradient(180deg, #880691, #18061e);
@@ -237,11 +238,17 @@ button a {
   flex-direction: row;
 }
 
+.front-btn {
+  width: 10vw;
+}
+
 /* SVG BLOCK */
 .front {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: 90%;
+  margin-inline: 50px;
 }
 /* typing Effect */
 .sentence {
@@ -360,12 +367,12 @@ button a {
 
 /* PRIZES card  */
 .prizes {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   grid-area: prize;
   background-color: #000000;
-  height: 25rem;
-  width: 70rem;
-  margin-inline: 8vw;
+  height: min-content;
+  width: 80%;
+  margin-inline: 5%;
   padding: 20px;
 }
 
