@@ -367,11 +367,14 @@ button a {
   grid-area: prize;
   background-color: #000000;
   height: min-content;
-  width: 80%;
+  max-width: 100%;
   margin-inline: 5%;
   padding: 20px;
 }
-
+.DomainHeading{
+  color: rgb(252, 51, 245);
+  text-align: center;
+}
 .PrizeHeading {
   /* font-size: 5rem;
     margin-bottom: 2rem; */
@@ -400,6 +403,10 @@ button a {
   color: rgb(77, 241, 99);
   text-align: center;
   margin-top: 50px;
+}
+.prizedesc{
+  color:#edeaea;
+  width: 90%;
 }
 
 /* Sponser CARD */
