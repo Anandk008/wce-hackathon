@@ -87,12 +87,15 @@ body {
 }
 
 #nav-bar {
-  display: inline-block;
-  height: auto;
-  justify-content: center;
-  padding: 10px;
-  max-width: max-content;
-  min-width: min-content;
+  display: flex;
+  height: 60px;
+  justify-content: left;
+  min-width: max-content;
+  margin: 0 0 50px 0;
+}
+.PrizeHeading {
+  text-align: unset;
+  margin-inline-start: 30%;
 }
 #nav-bar ul {
   display: flex;
@@ -139,15 +142,9 @@ body {
   width: 60%;
 }
 .hackathon {
-  height: 50vh;
+  height: 20%;
 }
-.nav-mobile {
-  min-width: max-content;
-  height: 55px;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-}
+
 .wrapper .item {
   min-width: max-content;
   border-bottom-right-radius: 10px;

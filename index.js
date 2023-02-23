@@ -5,7 +5,7 @@ window.addEventListener("scroll", function () {
   if (window.scrollY > 3) {
     // this.document.querySelector(".nav-box").style.opacity = 1;
     if (v.classList !== "nav-box") {
-      v.className += "nav-box nav-mobile ";
+      v.className += "nav-box ";
       a.innerHTML = `<a href="#" class="logo"> IIE CELL </a>`;
     }
     // v.classList.add("nav-box") ;
