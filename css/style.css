@@ -238,10 +238,6 @@ button a {
   flex-direction: row;
 }
 
-.front-btn {
-  width: 10vw;
-}
-
 /* SVG BLOCK */
 .front {
   display: flex;
